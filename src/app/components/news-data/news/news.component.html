@@ -1,0 +1,69 @@
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-9 col-md-5">
+                <div class="content w-100">
+                <!-- <h5 style="font-family: cursive;color: #580633;font-size: 23px;">Welcome.</h5> -->
+                <!-- <p style="font-family: cursive;font-size: 20px;color: white;">Millions of movies, TV shows and people to discover. Explore now. </p> -->
+                <div class="d-flex w-100">
+                    <div class="w-75">
+                        <input type="search" [(ngModel)]="searchKey" (keyup)="filterNews()" class="w-100" placeholder="{{'Search For a News'|translate}}">
+                    </div>
+                    <div class="w-25">
+                        <button [style.background]="ServiceService.globalColor" (click)="filterNews()">{{'search'|translate}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="mt-5">
+    <div class="container">
+        <div class="row">
+           
+        
+    
+        <ng-container *ngIf="filtered.length != 0">
+            <div class="col-sm-6 col-md-6 col-lg-3 mt-5" *ngFor="let news of filtered;let i=index">
+                <a routerLink="/news-details/{{i}}" style="text-decoration: none;">
+                <div>
+                <div class="content" style="position: relative;width: 100%;height: 400px;">
+                <img [src]="news.urlToImage" class="w-100 h-100" alt="">
+                <div [style.background]="ServiceService.overlayColor" class="overlay">
+                    <a href="">{{'Read More'|translate}}</a>
+                </div>
+            </div>
+                <p class="mt-3" style="color: white;font-family: cursive;">{{news.title}}</p>   
+            </div>
+        </a>
+            </div>
+            </ng-container>
+
+            <ng-container *ngIf="filtered.length == 0 && f == true">    
+                <div class="col-sm-6 col-md-6 col-lg-3 mt-5" *ngFor="let news of allNews;let i=index">
+                    <a routerLink="/news-details/{{i}}" style="text-decoration: none;">
+                    <div>
+                    <div class="content" style="position: relative;width: 100%;height: 400px;">
+                    <img [src]="news.urlToImage" class="w-100 h-100" alt="">
+                    <div [style.background]="ServiceService.overlayColor" class="overlay">
+                        <a href="">Read More</a>
+                    </div>
+                </div>
+                    <p class="mt-3" style="color: white;font-family: cursive;">{{news.title}}</p>   
+                </div>
+            </a>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="filtered.length == 0 && f == false">
+                <p>not found</p>
+               </ng-container>
+        </div>
+    </div>
+</div>

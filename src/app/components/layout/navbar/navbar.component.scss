@@ -1,0 +1,110 @@
+@import '../../../shared/shared-variable.scss';
+.navbar{
+    background:$mainColor;
+    padding: 22px;
+    h5{color: white;font-family: emoji;margin: 0 33%;font-size: 19px;
+        width: 100%;
+        line-height: 37px;
+    }
+    ul{
+            margin: 0 24%;
+    width: 77%;
+        line-height: 40px;
+        li{
+            list-style-type: none;
+            float: left;
+            margin: 0 2%;
+            transition: all .5s ease-in-out;
+            font-size: 16px;
+            a{
+                color: white;
+                text-decoration: none;
+                font-family: system-ui;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+}
+.clearFix{clear: both;}
+
+.pos{
+    position: fixed;
+    width: 100%;
+    z-index:888888888888;
+    background:$mainColor;
+    top: 0;
+    left: 0;
+}
+.mobileMenu{display: none;}
+.fa-align-left{margin: 0 30%;}
+.content{
+    border: 1px dotted rgb(194, 194, 194);
+    padding: 7px;
+    border-radius: 2px;
+}
+.content div{
+    border-radius: 50%;
+    width: 9%;
+    height: 16px;
+    margin:0 5%;
+    cursor:pointer;
+}
+.content div:nth-child(1){
+    background: #580633;
+}
+.content div:nth-child(2){
+    background: rgb(11, 48, 117);
+}
+.content div:nth-child(3){
+    background: rgb(59, 104, 104);
+}
+.content div:nth-child(4){
+    background: rgb(19, 19, 19);
+}
+.content div:nth-child(5){
+    background: #001f2f;
+}
+@media (max-width: 767px ){/* mobile & tablet*/
+.navbar h5{
+    
+    margin: 0 0%
+}
+.navbar ul {
+    margin: 0 -3%;
+    width: 100%;
+}
+.navbar ul li{margin:0 2%}
+.displayed-ul{display: none;}
+.mobileMenu{
+    display: block;
+    width: 95%;
+    margin: 9px 0%;
+    margin-left: 24%;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    // background: rgb(3, 18, 47);  
+}
+.content{    margin: 1% 0}
+.content div {
+    width: 20%;
+    height: 13px;
+    // height: 14px;
+}
+}
+
+
+
+@media (min-width: 768px) and (max-width:991px){ /* small screen */ 
+    .navbar h5{
+    
+        margin: 0 0%
+    }
+    .navbar ul {
+        margin: 0px 0%;
+        width: 81%;
+        }  
+}
+@media (min-width: 992px) and (max-width:1199px) { /* medium screen */
+}

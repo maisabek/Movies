@@ -1,0 +1,192 @@
+
+<div class="header">
+    <div class="overlay" style="background: rgba(1, 9, 22, 0.5);">
+        <div class="container">
+            <div class="content">
+                <p data-wow-duration="2s" class="wow bounce"
+                    style="font-family: cursive; font-size: 20px; visibility: visible; animation-duration: 2s; animation-name: bounce;">
+                    Welcome</p>
+                <p>For Entirtenment View Movies &amp; News &amp; Drawing Here</p>
+                <button data-wow-duration="2s" class="wow fadeInUpBig"
+                    style="background: rgb(2, 13, 34); visibility: visible; animation-duration: 2s; animation-name: fadeInUpBig;">
+                    Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div data-wow-duration="1s" data-wow-delay=".5s" class="col-11 col-md-4 mt-5 ml-5 wow fadeInRight"
+                style="margin: 0% 5%; visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
+                <div data-wow-duration="1s" data-wow-delay="1.7s" class="section2-img1 wow fadeInRight"
+                    style="position: absolute; visibility: hidden; animation-duration: 1s; animation-delay: 1.7s; animation-name: none;">
+                    <img src="assets/images/04.jpg" alt="" class="w-100">
+                </div>
+                <div data-wow-duration="1s" data-wow-delay="1.5s" class="section2-img2 wow fadeInRight"
+                    style="position: absolute; visibility: hidden; animation-duration: 1s; animation-delay: 1.5s; animation-name: none;">
+                    <img src="assets/images/06.jpg" alt="" class="w-100">
+                </div>
+                <img src="assets/images/05.jpg" alt="" class="w-100 h-40">
+            </div>
+            <div class="col-md-6 mt-5">
+                <h5 data-wow-duration="1.5s" class="wow bounce"
+                    style="text-align: center; color: white; font-family: cursive; font-size: 20px; margin-top: 20%; visibility: hidden; animation-duration: 1.5s; animation-name: none;">
+                    Watching your movies </h5>
+                <p data-wow-duration="1.8s" class="wow flash"
+                    style="color: white; font-size: 20px; font-family: system-ui; visibility: hidden; animation-duration: 1.8s; animation-name: none;">
+                    We will show you step by step how to start watching your movies </p>
+                <p style="color: white; font-family: cursive; font-size: 14px;">Determined to ensure Superman's ultimate
+                    sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team
+                    of metahumans to protect the world</p>
+                <a routerlink="/movie" href="#/movie">
+
+                    <button data-wow-duration="2s" class="section2-btn wow fadeInDown"
+                        style="visibility: hidden; animation-duration: 2s; animation-name: none;">watche movies</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="movies mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 col-md-8 col-lg-10 mt-5">
+                <i aria-hidden="true" class="fa fa-arrow-circle-right"
+                    style="font-size: 24px; color: rgb(3, 20, 51);"></i>
+                <span style="font-size: 20px; margin: 1px 1%;">Movies</span>
+            </div>
+            <div class="col-4 col-md-4 col-lg-2 col-md-1 mt-5">
+                <a href="#/movie" routerlink="/movie"
+                    style="text-decoration: none; color: rgb(155, 153, 153); font-size: 15px;">see all</a>
+            </div>
+            <div  class="col-md-12 mt-4">
+                <owl-carousel-o [options]="customOptions">
+                    <ng-container *ngFor="let item of allMovie;let i=index">
+                    <ng-template carouselSlide >
+                        <a routerLink="/movie-details/{{item.id}}">
+                            <div class="content">
+                            <img [src]="imagePrefix+item.poster_path" class="w-100 h-100" alt="">
+                            <div [style.background]="ServiceService.overlayColor" class="moreDesc">
+                                <p>{{'Read More'|translate}}</p>
+                            </div>
+                        </div>
+                            </a>
+                    </ng-template> 
+                </ng-container> 
+                  </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-7 mt-5">
+                <div data-wow-duration="2.8s" class="charts-container w-100 wow fadeInRight"
+                    style="height: 85%; visibility: hidden; animation-duration: 2.8s; animation-name: none;">
+                    <div  data-wow-duration="2s" class="wow fadeInRight w-100 h-100"
+                        style="border-radius: 8px; visibility: hidden; animation-duration: 2s; animation-name: none;">
+                        <ngx-charts-bar-horizontal class="w-100 h-100 p-5" 
+                        [scheme]="colorScheme"
+                        [results]="single"
+                        [gradient]="gradient"
+                        [xAxis]="showXAxis"
+                        [yAxis]="showYAxis"
+                        [legend]="showLegend"
+                        [showXAxisLabel]="showXAxisLabel"
+                        [showYAxisLabel]="showYAxisLabel">
+                        </ngx-charts-bar-horizontal>
+                    </div>
+                </div>
+            </div>
+            <div  class="col-md-5 mb-2">
+                <div  class="row">
+                    <div  class="col-md-4 mt-5">
+                        <div  class="box-area">
+                            <div  class="box1"></div>
+                            <div  class="box2"></div>
+                            <div  class="box3"></div>
+                            <div  class="box4"></div>
+                            <div  class="box5"></div>
+                            <div  class="box6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="movies mt-5">
+    <div  class="container">
+        <div class="row">
+            <div class="col-8 col-md-8 col-lg-10 mt-5">
+                <i  aria-hidden="true"
+                    class="fa fa-arrow-circle-right" style="font-size: 24px; color: rgb(3, 20, 51);"></i><span
+                     style="font-size: 20px; margin: 1px 1%;">Games
+                </span></div>
+            <div  class="col-4 col-md-4 col-lg-2 col-md-1 mt-5">
+                <a href="#/games" routerlink="/games"
+                    style="text-decoration: none; color: rgb(155, 153, 153); font-size: 15px;">see all</a></div>
+            <div  class="col-md-12 mt-4">
+                <owl-carousel-o [options]="customOptions2">
+                    <ng-container *ngFor="let item of allGames;let i=index">
+                    <ng-template carouselSlide >
+                        <a [href]="item.game_url">
+                            <div class="content">
+                            <img [src]="item.thumbnail" class="w-100" style="height:280px" alt="">
+                            <div [style.background]="ServiceService.overlayColor" class="moreDesc">
+                                <!-- <div class="d-flex mt-3"> -->
+                                    <!-- <p>{{item.short_description}}</p> -->
+                                     <a   style="color: white;text-decoration:none;margin:30% 10%;" [href]="item.game_url">
+                                          {{'Try It Now'|translate}}
+                                     </a></div>
+                                    <!-- </div>                            </div> -->
+                        </div>
+                            </a>
+                    </ng-template> 
+                </ng-container> 
+                  </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+
+
+
+<div class="News mt-5">
+    <div  class="container">
+        <div class="row"> 
+            <div  class="col-8 col-md-8 col-lg-10 mt-5"><i aria-hidden="true"
+                    class="fa fa-arrow-circle-right" style="font-size: 24px; color: rgb(3, 20, 51);"></i><span
+                    style="font-size: 20px; margin: 0 1%;">News</span></div>
+            <div  class="col-4 col-md-4 col-lg-2 mt-5">
+                <a  href="#/news"
+                    routerlink="/news" style="text-decoration: none; color: rgb(155, 153, 153); font-size: 15px;">see all</a>
+            </div>
+            <div  class="col-md-12 mt-4">
+                <owl-carousel-o [options]="customOptions3">
+                    <ng-container *ngFor="let item of allNews;let i=index">
+                    <ng-template carouselSlide >
+                        <a routerLink="/news-details/{{i}}" style="text-decoration: none;">
+                            <div class="content">
+                            <img [src]="item.urlToImage" class="w-100" style="height:280px" alt="">
+                            <div [style.background]="ServiceService.overlayColor" class="moreDesc">
+                            </div>
+                        </div>
+                            </a>
+                    </ng-template> 
+                </ng-container> 
+                  </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</div>

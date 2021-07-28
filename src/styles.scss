@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import '../src/app/shared/shared-variable.scss';
+@import '../node_modules/angular-archwizard/styles/archwizard.css';
+
+@import '~ng-wizard/themes/ng_wizard.min.css';
+@import '~ng-wizard/themes/ng_wizard_theme_arrows.min.css';
+@import '~ng-wizard/themes/ng_wizard_theme_circles.min.css';
+@import '~ng-wizard/themes/ng_wizard_theme_dots.min.css';
+body{background: rgb(2, 13, 34)}
+html, body { height: 100%; color: white;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.canvas-container{width: 100% !important; height: 486px !important;}
+#c,.upper-canvas{width: 100% !important;    height: 486px !important;}
+.mat-menu-panel {
+    min-width: 307px !important;
+    margin: 13px -5% !important;
+}
+.mat-menu-item{border: 1px solid $mainColor !important;}
+// .mat-dialog-container {background: $mainColor !important;}
+.mat-form-field-appearance-legacy .mat-form-field-suffix .mat-icon-button {
+font-size:40px !important;
+outline: none !important;
+}
+.chart-legend .legend-title-text {
+    display: none !important;
+}
+.ngx-charts {
+
+    text {
+      fill:white !important}}
+.chart-legend .legend-label {
+color:white !important}
+.mat-form-field-ripple {
+    background-color: white !important;
+}
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: $mainColor !important; 
+}
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: white !important;
+}
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: #62615e !important; 
+}
+.mat-menu-item {
+border: none !important;
+}
+// .cdk-overlay-pane {
+//     width: 513px !important;
+//     height: 513px !important;
+// }

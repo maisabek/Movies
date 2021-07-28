@@ -1,0 +1,54 @@
+@import '../../shared/shared-variable.scss';
+
+.header{
+    background: linear-gradient(rgba(22, 0, 11, 0.5),rgba(22, 0, 11, 0.5)),url(../../../assets/images/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    .content{
+        margin: 19% 25%;color: white;
+        button{
+            background-color: #220113;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    margin: 0px -15%;
+        }
+    }
+
+}
+
+
+canvas{
+    border: 1px solid white;
+    margin: 2%  0%;
+    width: 100% !important;
+}
+button{
+    background: white;
+    color:$mainColor ;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+@media (max-width: 767px ){/* mobile & tablet*/
+button{margin: 1% 0;}
+.c{width: 200px !important;height: 200px !important;}
+}
+@media (min-width: 768px) and (max-width:991px){ /* small screen */ 
+    button{
+        margin-top: 3%;
+        }
+}
+@media (min-width: 992px) and (max-width:1199px) { /* medium screen */
+    button{
+    margin-top: 3%;
+    }
+    }

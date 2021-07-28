@@ -1,0 +1,74 @@
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-9 col-md-5">
+                <div class="content w-100">
+                <h5 class="wow bounce" data-wow-duration="2s" [style.color]="ServiceService.globalColor" style="font-family: cursive;color: #580633;font-size: 23px;">{{'Drawing.'|translate}}</h5>
+                <p style="font-family: cursive;font-size: 20px;color: white;">{{'people to discover. Explore now.'|translate}} </p>
+              
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+<div class="mt-5">
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-lg-2">
+            <button (click)="addCircle()">{{'add circle'|translate}}</button>
+        </div>
+        <div class="col-md-3 col-lg-3">
+            <button (click)="addRectangle()">{{'add Rectangle'|translate}}</button>
+        </div>
+        <div class="col-md-2 col-lg-2">
+            <button (click)="addTriangle()">{{'add triangle'|translate}}</button>
+        </div>
+        <div class="col-md-3 col-lg-3">
+            <button (click)="addParrallelRectangle()">{{'add parallel rectangle'|translate}}</button>
+        </div>
+        <div class="col-md-3 col-lg-3 mt-3">
+            <button (click)="addPolygon()">{{'add polygon'|translate}}</button>
+        </div>
+        <div class="col-md-2 col-lg-3 mt-3">
+            <button (click)="addText()">{{'add text'|translate}}</button>
+        </div>
+        <div class="col-md-2 col-lg-3 mt-3">
+            <button (click)="addCurve()">{{'add Curve'|translate}}</button>
+        </div>
+       
+        <div class="col-md-3 col-lg-3 mt-3">
+            <button (click)="addSqure()">{{'add Squre'|translate}}</button>
+        </div>
+        <div class="col-md-3 col-lg-3 mt-3">
+        <button (click)="ExportToContent('json')">{{'Generate Json'|translate}}</button>
+        </div>
+        <div class="col-md-3 col-lg-3 mt-3">
+        <button (click)="ExportToContent('svg')">{{'Generate SVG'|translate}}</button>
+        </div>
+        <div class="col-md-2 col-lg-3 mt-3">
+            <button (click)="clean()">{{'clean'|translate}}</button>
+        </div>
+        <div class="col-md-3 col-lg-3 mt-3">
+            <button (click)="save()">{{'Download Image'|translate}}</button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <code>{{OutputContent}}</code>
+
+        </div>
+        <div class="col-md-12">
+            <canvas class="c" id="c"></canvas>
+        </div>
+      
+    </div>
+</div>
+
+

@@ -1,0 +1,110 @@
+@import '../../../shared/shared-variable.scss';
+.footer1{
+    background: rgb(3, 20, 51);
+    padding: 60px;
+    h5,p{color: white;font-family: cursive;margin: 0 3%;font-size: 15px;width: 100%;}
+    p{font-family: emoji}
+    input{
+        outline: none;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+    }
+    button{
+        background-color: rgb(2, 10, 26);
+        color: white;
+        border: none;
+        outline: none;
+        // border-radius: 20px;
+        padding: 10px;
+        margin: 0px -15%;    
+    }
+}
+.footer{
+    color: white;
+    background:$mainColor;
+    padding: 20px;
+    h5{color: white;font-family: emoji;margin: 0 12%;font-size: 19px;}
+    ul{
+        margin: 0 73%;
+       width: 29%;
+        li{
+            float: left;
+            list-style-type: none;
+            margin: 0px 4px;
+            border: 1px solid gray;
+            padding-bottom: 6px;
+            padding-top: 7px;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 14%;
+            line-height: 25%;
+            text-align: center;
+            transition: all .5s ease-in-out;
+        }
+        a{color: white}
+    }
+}
+.clearfix{clear: both;}
+.footer ul li:hover{
+    background: white;
+}
+.footer ul li:hover a{
+    color: $mainColor;
+}
+.footer-input{width:70%}
+.footer-btn{width:30%}
+
+.fixed-item{
+    position: relative;
+}
+.scrollToTop{
+    background: rgb(3, 20, 51);
+    color: white;
+    width: 45px;
+    height: 45px;
+    padding:15px;
+    border-radius: 5px;
+    bottom: 20px;
+    z-index: 1000;
+    right: 20px;
+    position: fixed;
+        color: white;
+        line-height: 20px;
+        text-align: center;
+        box-shadow: 5px 5px 10px rgb(0 0 0 / 50%); 
+}
+@media (max-width: 767px ){/* mobile & tablet*/
+.footer ul {
+    width:  100%;
+    margin-left: 0%;
+}
+.footer1 button {
+    margin: 0px -2%
+}
+
+.footer-input {
+    width: 60%;
+    // margin-left: -12%;
+}
+.footer-btn{
+    width: 40%;}
+    .footer1{padding:43px 0px}
+.footer1 h5, .footer1 p {
+    margin: 9px 0%;
+   
+}
+.footer1 input {
+    width:60% !important
+}
+.footer1 button{
+    width:40% !important
+}
+}
+@media (min-width: 768px) and (max-width:991px){ /* small screen */ 
+    .footer ul {
+        margin: 0 36%;
+        width: 48%;
+    }
+}
+

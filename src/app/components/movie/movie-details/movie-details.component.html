@@ -1,0 +1,36 @@
+<div class="mt-5">
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-md-4 mt-5">
+                <img  class="w-100 h-100"[src]="imagePrefix+movieDetails.poster_path">
+            </div>
+            <div class="col-md-6 ml-5 mt-5">
+                <h5 style="color:white;font-family:cursive">{{movieDetails.title}}</h5>
+                <h5 style="color:rgb(189, 187, 187);font-size: 20px;margin-top: 8%;">overview</h5>
+                <p style="color:white;font-family:cursive;">{{movieDetails.overview}}</p>
+                <p style="color:rgb(185, 185, 185);font-family:cursive;">{{movieDetails.release_date}}</p>
+                <h5 style="color:rgb(209, 209, 209);font-family:cursive;font-size: 20px;margin-top: 8%;">vote_average</h5>
+                  <div class="d-flex">
+                     <div class="progress">
+                         <span class="title timer">{{movieDetails.vote_average}}%</span>
+                       <div class="left"></div>
+                       <div class="right"></div>
+                        
+                     </div>
+             
+                  </div>
+                  <p style="font-size: 19px;">Visit JustWatch for more information <a style="color:rgb(202, 199, 199);font-size:28px" [href]="movieDetails.homepage">  Here  </a></p>
+                       <!-- <p>{{VideosDetails}}</p> -->
+                       
+            </div>
+            <div class="col-md-12">
+                <div class="video-trailer mt-5">
+                        <iframe width="100%" height="455" [src]="VideoUrl" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+            </div>
+           
+        </div>
+    </div>
+
+</div>

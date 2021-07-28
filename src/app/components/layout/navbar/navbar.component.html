@@ -1,0 +1,56 @@
+<div [style.background]="ServiceService.globalColor" class="navbar" id="navbar">
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-4 col-sm-4 col-md-2">
+                <a routerLink="/home" style="text-decoration: none;">
+                <h5 style="font-family:Roboto">{{'Entirtenment'|translate}}</h5>
+                <!-- <img src="assets/images/logo.png" class="w-100 h-100" alt=""> -->
+            </a>
+                <!-- <img src="assets/images/logo.jpg" class="w-100 h-100" alt=""> -->
+            </div>
+            <div class="col-3  col-sm-3 col-md-8">
+                 <ul class="displayed-ul">
+                     <li>
+                         <a routerLink="/movie" routerLinkActive="activeLink">{{'Movies'| translate}}</a>
+                     </li>
+                     <li>
+                        <a routerLink="/games" routerLinkActive="activeLink">{{'Games'| translate}}</a>
+                    </li>
+                     <li>
+                         <a routerLink="/news" routerLinkActive="activeLink">{{'News'| translate}}</a>
+                     </li>
+                     <li>
+                        <a routerLink="/drawing" routerLinkActive="activeLink">{{'Drawing'| translate}}</a>
+                    </li>
+                   
+                    <li>
+                        <a style="cursor: pointer;" (click)="changeCurrentLang('en')">En</a> |
+                        <a  style="cursor: pointer;" (click)="changeCurrentLang('ar')">Ar</a>
+                    </li>
+                     <div class="clearFix"></div>
+                 </ul>
+                 <a [matMenuTriggerFor]="mobileMenu" class="mobileMenu">    
+                  <i class="fa fa-align-left" aria-hidden="true"></i>
+                 </a>
+                 <mat-menu #mobileMenu="matMenu">
+                    <a mat-menu-item routerLink="/movie" routerLinkActive="activeLink">{{'Movies'| translate}}</a>
+                    <a mat-menu-item  routerLink="/games" routerLinkActive="activeLink">{{'Games'| translate}}</a>
+                    <a mat-menu-item routerLink="/news" routerLinkActive="activeLink">{{'News'| translate}}</a>
+                    <a mat-menu-item routerLink="/drawing" routerLinkActive="activeLink">{{'Drawing'| translate}}</a>
+                    <a mat-menu-item style="cursor: pointer;" (click)="changeCurrentLang('en')">En</a>
+                    <a mat-menu-item  style="cursor: pointer;" (click)="changeCurrentLang('ar')">Ar</a>
+                 </mat-menu>
+             
+            </div>
+            <div class="col-5 col-sm-5 col-md-2">
+                <div class="content d-flex w-100">
+                <div (click)="changeTheme('#0c0107','rgba(22, 0, 11, 0.3)','#1d0211')"></div>
+                <div (click)="changeTheme('rgb(2, 13, 34)','rgba(1, 9, 22, 0.5)','rgb(3, 20, 51)')"></div>
+                <div (click)="changeTheme('rgb(47, 80, 80)','rgba(47, 80, 80,0.3)','rgb(50, 87, 87)')"></div>
+                <div (click)="changeTheme('black','rgba(10, 10, 10,.3)','rgb(14, 14, 14)')"></div>
+                <div (click)="changeTheme('#011011','rgba(1, 24, 17, 0.3)','#01191b')"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
