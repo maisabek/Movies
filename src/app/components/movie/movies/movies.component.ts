@@ -37,7 +37,7 @@ export class MoviesComponent implements OnInit {
     console.log("this.filtered",this.filtered)
   }
   sortedItem:any
- 
+
 sort() {
   this.f=true
   switch (this.sortedItem) {
@@ -78,6 +78,7 @@ sort() {
     //   break;
     // }
     case "Title [Z-A]": {
+      console.log("allMovies = ",this.allMovies)
       this.allMovies = this.allMovies.sort((low, high) => high.title.trim().toLowerCase() > low.title.trim().toLowerCase() ? 1 : -1)
       break;
     }
@@ -85,7 +86,7 @@ sort() {
       this.allMovies = this.allMovies.sort((low, high) => high.title.trim().toLowerCase() < low.title.trim().toLowerCase() ? 1 : -1)
       break;
     }
-  
+
   }
     console.log("this.allMovies",this.allMovies)
   return this.allMovies;
